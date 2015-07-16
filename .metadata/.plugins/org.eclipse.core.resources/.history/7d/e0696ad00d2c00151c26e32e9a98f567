@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- META information about your site -->
+	<!-- This is important for allowing your public page to be correctly indexed by search engines -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Public page for a demo application allowing user management.">
+	<meta name="keywords" content="User management, Groups, Demo Application">
+	<meta name="author" content="Mihai Boicu, Rajat Khanna">
+</head>
+<body>
+	<p>Hello World</p>
+</body>
+</html>
