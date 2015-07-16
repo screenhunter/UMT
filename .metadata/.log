@@ -1,0 +1,152 @@
+
+!ENTRY org.eclipse.ui.ide 4 4 2015-07-15 23:12:33.092
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2015-07-15 23:12:33.093
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2015-07-15 23:12:33.094
+!MESSAGE Could not write workspace metadata '/Users/rajatkhanna/Documents/Work/UMT/.metadata/.plugins/org.eclipse.core.resources/.root/7.tree'.
+!STACK 0
+java.io.FileNotFoundException: /Users/rajatkhanna/Documents/Work/UMT/.metadata/.plugins/org.eclipse.core.resources/.root/7.tree (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.saveTree(SaveManager.java:1406)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1188)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2270)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:453)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY com.google.gwt.eclipse.core 4 0 2015-07-15 23:12:33.360
+!MESSAGE Could not stop source viewer server.
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.initLogging(JettyServer.java:40)
+	at com.google.gdt.eclipse.platform.jetty.JettyServer.<clinit>(JettyServer.java:30)
+	at com.google.gwt.eclipse.core.GWTPlugin.stop(GWTPlugin.java:147)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:827)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$4.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.stop(BundleContextImpl.java:820)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.stopWorker0(EquinoxBundle.java:955)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.stopWorker(EquinoxBundle.java:323)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.decStartLevel(ModuleContainer.java:1623)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1542)
+	at org.eclipse.osgi.container.SystemModule.stopWorker(SystemModule.java:248)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule.stopWorker(EquinoxBundle.java:144)
+	at org.eclipse.osgi.container.Module.doStop(Module.java:626)
+	at org.eclipse.osgi.container.Module.stop(Module.java:488)
+	at org.eclipse.osgi.container.SystemModule.stop(SystemModule.java:186)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$SystemBundle$EquinoxSystemModule$1.run(EquinoxBundle.java:159)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Logging bundle must not be null.
+	at org.eclipse.core.internal.runtime.Log.<init>(Log.java:30)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getLog(InternalPlatform.java:351)
+	at org.eclipse.core.runtime.Platform.getLog(Platform.java:1017)
+	at com.google.gdt.eclipse.platform.jetty.JettyEclipseLogger.<clinit>(JettyEclipseLogger.java:35)
+	... 20 more
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-07-15 23:12:34.638
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2015-07-15 23:23:03.833 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/rajatkhanna/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/rajatkhanna/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.ui 2 0 2015-07-15 23:23:24.360
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.google.gdt.eclipse.designer' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY org.eclipse.ui 2 0 2015-07-15 23:23:24.685
+!MESSAGE The 'org.eclipse.ui.startup' extension from 'com.google.gdt.eclipse.designer.UiBinder' does not provide a 'class' attribute.
+This usage is deprecated and a 'class' attribute should be provided.
+The release after Mars (4.5) will no longer support the deprecated usage!
+
+!ENTRY com.google.gdt.eclipse.drive 1 0 2015-07-15 23:25:40.045
+!MESSAGE Connected to Drive service at https://www.googleapis.com/
+
+!ENTRY com.google.gdt.eclipse.drive 4 0 2015-07-15 23:25:40.462
+!MESSAGE Error retrieving App Script projects from Drive
+!STACK 0
+com.google.api.client.googleapis.json.GoogleJsonResponseException: 403 Forbidden
+{
+  "code" : 403,
+  "errors" : [ {
+    "domain" : "usageLimits",
+    "message" : "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup.",
+    "reason" : "dailyLimitExceededUnreg",
+    "extendedHelp" : "https://code.google.com/apis/console"
+  } ],
+  "message" : "Daily Limit for Unauthenticated Use Exceeded. Continued use requires signup."
+}
+	at com.google.api.client.googleapis.json.GoogleJsonResponseException.from(GoogleJsonResponseException.java:145)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:113)
+	at com.google.api.client.googleapis.services.json.AbstractGoogleJsonClientRequest.newExceptionOnError(AbstractGoogleJsonClientRequest.java:40)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest$1.interceptResponse(AbstractGoogleClientRequest.java:312)
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1045)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:410)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.executeUnparsed(AbstractGoogleClientRequest.java:343)
+	at com.google.api.client.googleapis.services.AbstractGoogleClientRequest.execute(AbstractGoogleClientRequest.java:460)
+	at com.google.gdt.eclipse.drive.driveapi.DriveCache.make(DriveCache.java:62)
+	at com.google.gdt.eclipse.drive.driveapi.DriveServiceFacade.getFolderTree(DriveServiceFacade.java:124)
+	at com.google.gdt.eclipse.drive.wizards.ScriptProjectImportWizardPage$2$1.call(ScriptProjectImportWizardPage.java:216)
+	at com.google.gdt.eclipse.drive.wizards.ScriptProjectImportWizardPage$2$1.call(ScriptProjectImportWizardPage.java:1)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2015-07-15 23:26:38.770
+!MESSAGE Registering: com.google.appengine.eclipse.sdkbundle_1.9.22
+
+!ENTRY com.google.gdt.eclipse.suite 1 0 2015-07-15 23:26:38.956
+!MESSAGE Registering: com.google.gwt.eclipse.sdkbundle_2.6.0
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2015-07-15 23:27:10.615
+!MESSAGE Sending POST request to Analytics: {an=Google Plugin for Eclipse, tid=UA-43239122-1, cd10=1436993578132, cd1=org.eclipse.epp.package.jee.product, cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44, cd3=3.10.0.v20150423-0755, t=event, cd6=none, cd5=false, v=1, ea=IMPORT_GAE_DEMO_APP, ec=com.google.gdt.eclipse.suite.ext, cid=1436993578132}
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2015-07-15 23:27:10.617
+!MESSAGE Analytics ping request parameters: an=Google%20Plugin%20for%20Eclipse&tid=UA-43239122-1&cd10=1436993578132&cd1=org.eclipse.epp.package.jee.product&cd4=com.google.gdt.eclipse.suite.e44.feature_3.8.0.v201410302155-rel-r44&cd3=3.10.0.v20150423-0755&t=event&cd6=none&cd5=false&v=1&ea=IMPORT_GAE_DEMO_APP&ec=com.google.gdt.eclipse.suite.ext&cid=1436993578132
+
+!ENTRY com.google.gdt.eclipse.suite.ext 1 0 2015-07-15 23:27:10.750
+!MESSAGE Analytics ping response: 200: OK
+GIF89a  �� ���   ,       D ;
+
+!ENTRY com.google.gdt.eclipse.drive 1 0 2015-07-15 23:27:21.146
+!MESSAGE DriveLoginListener invoked to report login
+
+!ENTRY com.google.appengine.eclipse.core 4 0 2015-07-15 23:28:01.249
+!MESSAGE Datanucleus enhancer terminated with exit code 1.
+Navigate to the console view for "Datanucleus Enhancer" for more information
+
+!ENTRY com.google.appengine.eclipse.core 4 0 2015-07-15 23:30:05.272
+!MESSAGE Datanucleus enhancer terminated with exit code 1.
+Navigate to the console view for "Datanucleus Enhancer" for more information
+
+!ENTRY com.google.appengine.eclipse.core 4 0 2015-07-15 23:30:14.300
+!MESSAGE Datanucleus enhancer terminated with exit code 1.
+Navigate to the console view for "Datanucleus Enhancer" for more information
+
+!ENTRY org.eclipse.ui 4 4 2015-07-15 23:36:05.651
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@6ca9ec77)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@6f913ad2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-07-15 23:36:05.784
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@6ca9ec77)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@6f913ad2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-07-15 23:36:05.796
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.forwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@6c2a7c73)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$2@3136d636)}
+
+!ENTRY org.eclipse.ui 4 4 2015-07-15 23:36:05.805
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.forwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@6c2a7c73)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$2@3136d636)}
+
+!ENTRY com.google.appengine.eclipse.core 4 0 2015-07-15 23:36:38.553
+!MESSAGE Datanucleus enhancer terminated with exit code 1.
+Navigate to the console view for "Datanucleus Enhancer" for more information
