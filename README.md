@@ -31,7 +31,6 @@ Refer to [this link](https://developers.google.com/eclipse/docs/download)
 ![war folder contents](http://i.imgur.com/CmbdcoX.png)
 
 ##Step 2: Creating a Guest View.
-----
 ###Part 1:	Configuring the Project Template
 For the application we will create a guest view that will be publicly accessible.  To do this, we will create a folder, guest, in which we will add all the dedicated files for a guest.
 - In the war folder, create a new folder named **guest** (This folder will group all files for a guest.
