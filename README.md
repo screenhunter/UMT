@@ -25,5 +25,6 @@ Step 1: Create project and add in dependencies.
  	- Download the latest version of AngularJs from [here] (https://angularjs.org)
     - Copy angular.js and angular.min.js to the js folder
     - Copy angular-route.js, angular-route.min.js, angular-sanitize.js, and angular-sanitize.min.js to the js folder
-At the end of step 1, your war directory should be failry similar to:![war folder contents](http://i.imgur.com/CmbdcoX.png)
+At the end of step 1, your war directory should be failry similar to:
+![war folder contents](http://i.imgur.com/CmbdcoX.png)
 	
