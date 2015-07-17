@@ -49,3 +49,8 @@ Next, add some header and meta information to the page.
 - Add a title to the page after the meta information. For this tutorial, we will give it the title **UMS - User Management System - Guest View**
 - Executing the project now shows the title as the tab name:
 ![tab name](http://i.imgur.com/i8RpZ9r.png)
+
+Now add Bootstrap to the guest.html file.
+- Add the jQuery and Bootstrap libraries to the head:
+![libraries](http://i.imgur.com/pT3yYIV.png)
+Note that though we added both the development and production libraries, we opted to use the development libraries here. In production, you may even link to public repositories for the libraries.
