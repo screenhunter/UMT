@@ -52,5 +52,7 @@ Next, add some header and meta information to the page.
 
 Now add Bootstrap to the guest.html file.
 - Add the jQuery and Bootstrap libraries to the head:
-![libraries](http://i.imgur.com/pT3yYIV.png)
+![libraries](http://i.imgur.com/TxvNzhe.png)
 Note that though we added both the development and production libraries, we opted to use the development libraries here. In production, you may even link to public repositories for the libraries.
+- To test the library, change the Hello World message to a quote with some Bootsrap styling:
+
