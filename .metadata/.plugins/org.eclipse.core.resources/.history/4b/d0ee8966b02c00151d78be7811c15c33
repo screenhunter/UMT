@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- META information about your site -->
+	<!-- This is important for allowing your public page to be correctly indexed by search engines -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Public page for a demo application allowing user management.">
+	<meta name="keywords" content="User management, Groups, Demo Application">
+	<meta name="author" content="Mihai Boicu, Rajat Khanna">
+	
+	<!-- TITLE -->
+	<title>UMS - User Management System - Guest View</title>
+	
+	<!-- SCRIPT jQuery -->
+	<!-- The following must be used in development. This is uncompressed and easy to understand -->
+	<script src="/js/jquery-1.11.3.js"></script>
+	<!--  The following must be used in production. This is compressed and hard to understand -->
+	<!-- <script src="/js/jquery-1.11.3.min.js"></script> -->
+	
+	<!-- CSS Bootstrap -->
+	<!-- This is the development CSS file. This is uncompressed and easy to understand. -->
+	<link href="/css/bootsrap.css" rel="stylesheet">
+	<script src="/js/bootsrap.js"></script>
+	<!-- This following must be used in production. This is compressed and hard to understand. -->
+	<!-- <link href="/css/bootsrap.min.css" rel="stylesheet"> -->
+	<!-- <script src="/js/bootsrap.min.js"></script> -->
+	
+	
+</head>
+<body>
+	<div class="quote">
+		<div class="container">
+			<blockquote>
+				<p>My life-long journey: teaching how to learn and learning how to teach!</p>
+				<footer>Mihai Boicu in <cite title="Source Title">Teaching Portfolio</cite></footer>
+			</blockquote>	
+		</div>
+	</div>
+</body>
+</html>
