@@ -45,4 +45,3 @@ At the end of Step 2 Part 1, the html should look similar to:
 Executing the project should give the following guest page:
 
 ![display page](http://i.imgur.com/NIwXOd2.png)
- 
