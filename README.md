@@ -55,4 +55,4 @@ Now add Bootstrap to the guest.html file.
 ![libraries](http://i.imgur.com/TxvNzhe.png)
 Note that though we added both the development and production libraries, we opted to use the development libraries here. In production, you may even link to public repositories for the libraries.
 - To test the library, change the Hello World message to a quote with some Bootsrap styling:
-
+![bootstrap test](http://i.imgur.com/An3DKcd.png)
