@@ -27,7 +27,6 @@ Refer to [this link](https://developers.google.com/eclipse/docs/download)
 - Copy **angular-route.js**, **angular-route.min.js**, **angular-sanitize.js**, and **angular-sanitize.min.js** to the js folder
  
  At the end of step 1, your war directory should be failry similar to:
-
 ![war folder contents](http://i.imgur.com/CmbdcoX.png)
 
 ##Step 2: Creating a Guest View.
@@ -39,9 +38,14 @@ For the application we will create a guest view that will be publicly accessible
 - Add an empty head, and a body with a hello world message.
 
 At the end of Step 2 Part 1, the html should look similar to:
-
 ![guest.html contents](http://i.imgur.com/pVBn1le.png)
 
 Executing the project should give the following guest page:
-
 ![display page](http://i.imgur.com/NIwXOd2.png)
+
+Next, add some header and meta information to the page.
+- Add meta information about the site to the head of the guest page:
+![meta information](http://i.imgur.com/c2srHWH.png)
+- Add a title to the page after the meta information. For this tutorial, we will give it the title **UMS - User Management System - Guest View**
+- Executing the project now shows the title as the tab name:
+![tab name](http://i.imgur.com/i8RpZ9r.png)
