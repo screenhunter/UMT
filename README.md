@@ -63,10 +63,10 @@ Note that though we added both the development and production libraries, we opte
 ![angularJS library](INSERT LINK HERE)
 - Add a small AngularJS test at the beginning of the body to check that it is running properly.
 ![angularJS test](INSERT LINK HERE)
-..- The Bootstrap **well** followed by the class **well-lg** creates the effect of an accent box with margins
-..- The row class just groups everything together. It would be useful if there was multi-column content.
-..- The lead class in the paragraph emphasizes the text as the leading content in the well
-..- The {{}} indicates an AngularJS expression that needs to be evaluated and replaced in the file during execution.
+	- The Bootstrap **well** followed by the class **well-lg** creates the effect of an accent box with margins
+	- The row class just groups everything together. It would be useful if there was multi-column content.
+	- The lead class in the paragraph emphasizes the text as the leading content in the well
+	- The {{}} indicates an AngularJS expression that needs to be evaluated and replaced in the file during execution.
 - Thus, executing the project gives:
 ![AngularJS test](INSERT LINK HERE)
 Note that if AngularJS was not running properly, the **3** would appear as **{{1+2}}**
