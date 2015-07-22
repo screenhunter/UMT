@@ -46,12 +46,12 @@ Executing the project should give the following guest page:
 
 Next, add some header and meta information to the page.
 - Add meta information about the site to the head of the guest page:
-![meta information](http://i.imgur.com/c2srHWH.png)
+![meta information](http://i.imgur.com/P7hjt0I.png)
 - Add a title to the page after the meta information. For this tutorial, we will give it the title **UMS - User Management System - Guest View**
 - Executing the project now shows the title as the tab name:
 ![tab name](http://i.imgur.com/i8RpZ9r.png)
 
-Now add Bootstrap and AngularJS to the guest.html file.
+Now add Bootstrap and AngularJS to the **guest.html** file.
 - Add the jQuery and Bootstrap libraries to the head:
 ![libraries](http://i.imgur.com/TxvNzhe.png)
 Note that though we added both the development and production libraries, we opted to use the development libraries here. In production, you may even link to public repositories for the libraries.
@@ -73,3 +73,19 @@ Note that if AngularJS was not running properly, the **3** would appear as **{{1
 
 ###Part 2:	Single page navigation with a main menu
 The goal of this part is to create a single page with various sections with the main menu always present on the screen and navigation control. No functionality or text will be entered, but it is a simple example of using Bootstrap to create a fast prototype of a site
+
+First create a guest.css file, which will store our layout and other style changes
+- Create a new CSS file named **guest.css** in the war/js folder.
+- In this file, add to the **body** tag to have **relative position**.
+	- This is required by the Bootstrap **scroll spy** feature, which will be explained later.   
+- Create a new class called **menu-link** that applies a 70px padding to the top of the element
+	- This is necessary because we will use a overlapping menu at the top of the page, and when an element is selected from the menu, it must be shown under the menu. The menu is around 50px, and we added 20px to allow some spacing.
+
+At this point, the guest.css looks like this:
+![guest.css screenshot](http://i.imgur.com/1iQsc6O.png)
+
+- Now, in **guest.html** we must be sure to link to this new file. The links to our defined css and js files must be after the libraries are loaded, at the end of the head tag:
+- Add the attributes of the scroll spy to the **guest.html** main body
+	- The attribute **data-spy** will enable the Bootstrap spy mechanism on the body, with the strategy for “scroll”.
+	- The attribute **data-target** will indicate which is the navigation element that will be updated based on the relative position in the body. 
+	- A scroll spy mechanism is automatic selecting the menu item in the menu as one will scroll the element to which it is attached (in our case the body).
