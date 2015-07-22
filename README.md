@@ -60,15 +60,15 @@ Note that though we added both the development and production libraries, we opte
 - To add AngularJS, we first modify the html tag by including the attribute **data-ng-app** (an AngularJS directive) to indicate that this file should be used as a template.
 ![html JS directive](http://i.imgur.com/tAeyyKG.png)
 - Then in the head, after the Bootstrap library, add the AngularJS library.
-![angularJS library](INSERT LINK HERE)
+![angularJS library](http://i.imgur.com/lJC5EMC.png)
 - Add a small AngularJS test at the beginning of the body to check that it is running properly.
-![angularJS test](INSERT LINK HERE)
+![angularJS test](http://i.imgur.com/MPP1Vnp.png)
 	- The Bootstrap **well** followed by the class **well-lg** creates the effect of an accent box with margins
 	- The row class just groups everything together. It would be useful if there was multi-column content.
 	- The lead class in the paragraph emphasizes the text as the leading content in the well
 	- The {{}} indicates an AngularJS expression that needs to be evaluated and replaced in the file during execution.
 - Thus, executing the project gives:
-![AngularJS test](INSERT LINK HERE)
+![AngularJS test](http://i.imgur.com/Y8VWvfy.png)
 Note that if AngularJS was not running properly, the **3** would appear as **{{1+2}}**
 
 ###Part 2:	Single page navigation with a main menu
