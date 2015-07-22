@@ -34,18 +34,12 @@
 	<script type="text/javascript" src="/js/angular-sanitize.js"></script>
 	<script type="text/javascript" src="/js/angular-route.js"></script>
 	<!--  The following must be used in production. This is compressed and hard to understand -->
-	<!-- <script type="text/javascript" src="/js/angular.min.js"></script> -->
-	<!-- <script type="text/javascript" src="/js/angular-sanitize.min.js"></script> -->
-	<!-- <script type="text/javascript" src="/js/angular-route.min.js"></script> -->
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="/js/angular-route.min.js"></script>
 	
 </head>
 <body>
-	<div class="container">
-		<div class="row well well-lg">
-			<h1>AngularJS Test</h1>
-			<p class="lead">1 + 2 = {{1+2}}</p>
-		</div>
-	</div>
 	<div class="quote">
 		<div class="container">
 			<blockquote>
