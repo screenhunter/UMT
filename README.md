@@ -27,6 +27,7 @@ Refer to [this link](https://developers.google.com/eclipse/docs/download)
 - Copy **angular-route.js**, **angular-route.min.js**, **angular-sanitize.js**, and **angular-sanitize.min.js** to the js folder
  
  At the end of Step 1, your war directory should be fairly similar to:
+ 
 ![war folder contents](http://i.imgur.com/CmbdcoX.png)
 
 ##Step 2:	Creating a Guest View.
@@ -39,36 +40,51 @@ For the application we will create a guest view that will be publicly accessible
 - Add an empty head, and a body with a hello world message.
 
 Thus, the html should look similar to:
+
 ![guest.html contents](http://i.imgur.com/pVBn1le.png)
 
 Executing the project should give the following guest page:
+
 ![display page](http://i.imgur.com/NIwXOd2.png)
 
 Next, add some header and meta information to the page.
 - Add meta information about the site to the head of the guest page:
+
 ![meta information](http://i.imgur.com/P7hjt0I.png)
 - Add a title to the page after the meta information. For this tutorial, we will give it the title **UMS - User Management System - Guest View**
 - Executing the project now shows the title as the tab name:
+
 ![tab name](http://i.imgur.com/i8RpZ9r.png)
 
 Now add Bootstrap and AngularJS to the **guest.html** file.
 - Add the jQuery and Bootstrap libraries to the head:
+
 ![libraries](http://i.imgur.com/TxvNzhe.png)
+
 Note that though we added both the development and production libraries, we opted to use the development libraries here. In production, you may even link to public repositories for the libraries.
 - To test the Bootstrap library, change the Hello World message to a quote with some Bootstrap styling:
+
 ![bootstrap test](http://i.imgur.com/An3DKcd.png)
 - To add AngularJS, we first modify the html tag by including the attribute **data-ng-app** (an AngularJS directive) to indicate that this file should be used as a template.
+
 ![html JS directive](http://i.imgur.com/tAeyyKG.png)
+
 - Then in the head, after the Bootstrap library, add the AngularJS library.
+
 ![angularJS library](http://i.imgur.com/lJC5EMC.png)
+
 - Add a small AngularJS test at the beginning of the body to check that it is running properly.
+
 ![angularJS test](http://i.imgur.com/MPP1Vnp.png)
-	- The Bootstrap **well** followed by the class **well-lg** creates the effect of an accent box with margins
+
+- The Bootstrap **well** followed by the class **well-lg** creates the effect of an accent box with margins
 	- The row class just groups everything together. It would be useful if there was multi-column content.
 	- The lead class in the paragraph emphasizes the text as the leading content in the well
 	- The {{}} indicates an AngularJS expression that needs to be evaluated and replaced in the file during execution.
 - Thus, executing the project gives:
+
 ![AngularJS test](http://i.imgur.com/Y8VWvfy.png)
+
 Note that if AngularJS was not running properly, the **3** would appear as **{{1+2}}**
 
 ###Part 2:	Single page navigation with a main menu
