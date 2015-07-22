@@ -82,6 +82,7 @@ First create a guest.css file, which will store our layout and other style chang
 	- This is necessary because we will use a overlapping menu at the top of the page, and when an element is selected from the menu, it must be shown under the menu. The menu is around 50px, and we added 20px to allow some spacing.
 
 At this point, the guest.css looks like this:
+
 ![guest.css screenshot](http://i.imgur.com/1iQsc6O.png)
 
 - Now, in **guest.html** we must be sure to link to this new file. The links to our defined css and js files must be after the libraries are loaded, at the end of the head tag:
