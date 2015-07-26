@@ -102,7 +102,13 @@ At this point, the guest.css looks like this:
 ![guest.css screenshot](http://i.imgur.com/1iQsc6O.png)
 
 - Now, in **guest.html** we must be sure to link to this new file. The links to our defined css and js files must be after the libraries are loaded, at the end of the head tag:
-- Add the attributes of the scroll spy to the **guest.html** main body
+
+![stylesheet addition to guest.html](http://i.imgur.com/BA255yu.png)
+
+- Add the attributes of the scroll spy to the **guest.html** main body:
+
+![body tag with scroll spy attributes](http://i.imgur.com/0q1uUDI.png)
+
 	- The attribute **data-spy** will enable the Bootstrap spy mechanism on the body, with the strategy for “scroll”.
 	- The attribute **data-target** will indicate which is the navigation element that will be updated based on the relative position in the body. 
 	- A scroll spy mechanism is automatic selecting the menu item in the menu as one will scroll the element to which it is attached (in our case the body).
