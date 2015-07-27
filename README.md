@@ -106,9 +106,18 @@ At this point, the guest.css looks like this:
 ![stylesheet addition to guest.html](http://i.imgur.com/BA255yu.png)
 
 - Add the attributes of the scroll spy to the **guest.html** main body:
-
 ![body tag with scroll spy attributes](http://i.imgur.com/0q1uUDI.png)
-
 	- The attribute **data-spy** will enable the Bootstrap spy mechanism on the body, with the strategy for “scroll”.
-	- The attribute **data-target** will indicate which is the navigation element that will be updated based on the relative position in the body. 
-	- A scroll spy mechanism is automatic selecting the menu item in the menu as one will scroll the element to which it is attached (in our case the body).
+    - The attribute **data-target** will indicate which is the navigation element that will be updated based on the relative position in the body. 
+    - A scroll spy mechanism is automatic selecting the menu item in the menu as one will scroll the element to which it is attached (in our case the body).
+
+- Now we can add a navigation container for the menu:
+![navigation container](http://i.imgur.com/HvNWfuk.png)
+	- Make sure to remove all the old contents of the body
+    - The nav element is a Bootstrap element indicating a navigation section.
+    - The navbar and navbar-default class is the default for a navigation bar like a horizontal menu.
+	- The navbar-fixed-top is indicating that the menu will remain all the time at the top of the screen.When you scroll the text will scroll under the menu but the menu will stay on top.
+	- The navbar-inverse is changing the colors of the menu in inverse colors compared with the page.This way the menu will contrast.
+	- The id name of the menu, guest-main-menu must be the same with the name indicated in the spy scroll target attribute.
+	- We will format the menu in a container (leaving on larger devices a border around the text) 
+    
