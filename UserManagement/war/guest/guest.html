@@ -38,6 +38,9 @@
 	<!-- <script type="text/javascript" src="/js/angular-sanitize.min.js"></script> -->
 	<!-- <script type="text/javascript" src="/js/angular-route.min.js"></script> -->
 	
+	<!-- Angular Modules -->
+	<script type="text/javascript" src="guest-app.js"></script>
+	
 	<!-- Guest CSS -->
 	<link href="/css/guest.css" rel="stylesheet">
 	
@@ -128,7 +131,9 @@
 						<i>(required)</i>
 					</span>
 					
-					<span class="error-text">
+					<span class="error-text"
+						data-ng-show="subscribeForm.subscribeUserEmailInput.$dirty
+						&& subscribeForm.subscribeUserEmailInput.$invalid">
 						<i>(Invalid:
 							<span data-ng-show="subscribeForm.subscribeUserEmailInput.$error.required">
 								Email is required.
@@ -155,7 +160,9 @@
 						<i>(required)</i>
 					</span>
 					
-					<span class="error-text">
+					<span class="error-text"
+						data-ng-show="subscribeForm.subscribeUserPasswordInput.$dirty
+						&& subscribeForm.subscribeUserPasswordInput.$invalid">
 						<i>(Invalid:
 							<span data-ng-show="subscribeForm.subscribeUserPasswordInput.$error.required">
 								Password is required.
