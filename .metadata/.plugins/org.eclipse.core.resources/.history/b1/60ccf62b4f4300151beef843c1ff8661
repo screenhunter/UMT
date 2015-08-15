@@ -1,7 +1,0 @@
-body {
-	position: relative;
-}
-.menu-link {
-	padding-top: 70px;
-}
-
