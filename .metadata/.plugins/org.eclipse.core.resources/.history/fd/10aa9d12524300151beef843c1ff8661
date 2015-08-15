@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- You must include the AngularJS application directive, ng-app or data-ng-app. -->
+<html lang="en" data-ng-app="guestApp">
+
+<head>
+	<!-- META information about your site -->
+	<!-- This is important for allowing your public page to be correctly indexed by search engines -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Public page for a demo application allowing user management.">
+	<meta name="keywords" content="User management, Groups, Demo Application">
+	<meta name="author" content="Mihai Boicu, Rajat Khanna">
+	
+	<!-- TITLE -->
+	<title>UMS - User Management System - Guest View</title>
+	
+	<!-- SCRIPT jQuery -->
+	<!-- The following must be used in development. This is uncompressed and easy to understand -->
+	<script src="/js/jquery-1.11.3.js"></script>
+	<!--  The following must be used in production. This is compressed and hard to understand -->
+	<!-- <script src="/js/jquery-1.11.3.min.js"></script> -->
+	
+	<!-- CSS Bootstrap -->
+	<!-- This is the development CSS file. This is uncompressed and easy to understand. -->
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<script src="/js/bootstrap.js"></script>
+	<!-- This following must be used in production. This is compressed and hard to understand. -->
+	<!-- <link href="/css/bootsrap.min.css" rel="stylesheet"> -->
+	<!-- <script src="/js/bootsrap.min.js"></script> -->
+	
+	<!-- AngularJS -->
+	<!-- The following must be used in development. This is uncompressed and easy to understand -->
+	<script type="text/javascript" src="/js/angular.js"></script>
+	<script type="text/javascript" src="/js/angular-sanitize.js"></script>
+	<script type="text/javascript" src="/js/angular-route.js"></script>
+	<!--  The following must be used in production. This is compressed and hard to understand -->
+	<!-- <script type="text/javascript" src="/js/angular.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/js/angular-sanitize.min.js"></script> -->
+	<!-- <script type="text/javascript" src="/js/angular-route.min.js"></script> -->
+	
+	<!-- Guest CSS -->
+	<link href="/css/guest.css" rel="stylesheet">
+	
+</head>
+
+<!-- Bootstrap will spy the body and update the navigation in the
+	guest-main-menu element (a navigation bar) based on the current position in the body -->
+<body data-spy="scroll" data-target="#guest-main-menu">
+	<!-- MAIN MENU AT THE TOP OF THE PAGE -->
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" id="guest-main-menu">
+		<div class="container">
+			<!-- The menu toggle button for small screens, this will hide and show the menu -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#guest-main-menu-collapsible">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- The brand image and name are also part of the menu header -->
+				<a href="#" class="navbar-brand"><img alt="Brand" src="/img/UM-logo.png"></a>
+				<a href="#home" class="navbar-brand">User Management</a>
+			</div> <!-- navbar-header -->
+			<div class="collapse navbar-collapse" id="guest-main-menu-collapsible">
+				<!-- Main content menu items to the left -->
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="#about">About</a></li>
+					<li><a href="#users">Users</a></li>
+					<li><a href="#groups">Groups</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+				<!-- Main user login menu item to the right -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#login">Log in</a></li>
+					<li><a href="#subscribe">Subscribe</a></li>
+				</ul>
+			</div> <!-- guest-main-menu-collapsible -->
+		</div> <!-- Container for main menu -->
+	</nav> <!-- Navigation bar at the top for main menu -->
+
+	<div class="container">
+		<div class="menu-link" id="home">
+			<div class="row well well-lg">
+				<h1>Welcome to the User Management Tutorial</h1>
+				<p class="lead">This is a demo of the user management module.</p>
+			</div>
+		</div>
+		<div class="row menu-link" id="about">
+			<h2>About</h2>
+			<p class="lead">This module was created as a demonstration of Bootstrap, AngularJS, GAE, and JDO.</p>
+		</div>
+		<div class="row menu-link" id="users">
+			<h2>Users</h2>
+			<p class="lead">The module allows login and subscription of users with multiple authentication methods.</p>
+		</div>
+		<div class="row menu-link" id="groups">
+			<h2>Groups</h2>
+			<p class="lead">This module allows users to create and join groups.</p>
+		</div>
+		<div class="row menu-link" id="contact">
+			<h2>Contact Us</h2>
+			<p class="lead">For more information please contact us.</p>
+		</div>
+		<div class="row menu-link" id="login">
+			<h2>Login</h2>
+			<p class="lead">If you have an account please login using your current credentials.</p>
+		</div>
+		
+		<!-- Subscribe -->
+		<div class="menu-link" id="subscribe">
+			<div class='row well well-sm'>
+				<h2>Subscribe</h2>
+				<p class="lead">Subscribe for a new account with our application.</p>
+			</div>
+			
+			<form name="subscribeForm" novalidate role="form"
+				data-ng-controller="SubscribeController as subscribeCtrl"
+				data-ng-submit="subscribeCtrl.subscribeCall();">
+				
+				<!-- EMAIL -->
+				
+				<div class="form-group">
+					<label for="subscribeUserEmailInput">Enter your email:</label>
+					<span class="hint-text"
+						data-ng-show="!subscribeForm.subscribeUserEmailInput.$dirty
+						&& subscribeForm.subscribeUserEmailInput.$invalid">
+						<i>(required)</i>
+					</span>
+					
+					<span class="error-text">
+						<i>(Invalid:
+							<span data-ng-show="!subscribeForm.subscribeUserEmailInput.$error.required">
+								Email is required.
+							</span>
+							<span data-ng-show="!subscribeForm.subscribeUserEmailInput.$error.email">
+								This is not an email address.
+							</span>
+						)</i>
+					</span>
+					
+					<input type="email" class="form-control" name="subscribeUserEmailInput"
+					placeholder="Enter email"
+					data-ng-model="subscribedUser.email" required>
+					
+				</div> <!-- EMAIL form-group -->
+				
+				<!-- PASSWORD -->
+				<div class="form-group">
+				
+					<label for="subscribeUserPasswordInput">Create your password:</label>
+					<span class="hint-text"
+						data-ng-show="!subscribeForm.subscribeUserPasswordInput.$dirty
+						&& subscribeForm.subscribeUserPasswordInput.$invalid">
+						<i>(required)</i>
+					</span>
+					
+					<span class="error-text">
+						<i>(Invalid:
+							<span data-ng-show="!subscribeForm.subscribeUserPasswordInput.$error.required">
+								Password is required.
+							</span>
+						)</i>
+					</span>
+					
+					<input type="password" class="form-control" name="subscribeUserPasswordInput"
+					placeholder="Enter password"
+					data-ng-model="subscribedUser.password" required>
+					
+				</div> <!-- PASSWORD form-group -->
+				
+				<!-- SUBMIT -->
+				<div class="form-group">
+					<button type="submit" class="btn btn-xs btn-success"
+						data-ng-disabled="subscribeCtrl.subscribing || subscribeForm.$invalid">
+						<span class="glyphicon-glyphicon-log-in"></span> Subscribe
+					</button>
+				</div> <!-- SUBMIT form-group -->
+				
+				<div class="alert alert-danger" role="alert"
+					data-ng-show="subscribeCtrl.errorMessage">
+					<strong>{{subscribeCtrl.errorMessage}}</strong>
+					{{subscribeCtrl.errorDetails}}
+				</div>
+				
+				<div class="alert alert-success" role="alert"
+					data-ng-show="subscribeCtrl.successMessage != null">
+					<strong>{{subscribeCtrl.successMessage}}</strong>
+					{{eubscribeCtrl.errorDetails}}
+				</div>
+				
+			</form> <!-- subscribeForm -->
+			
+		</div> <!-- subscribe menu link -->
+	</div> <!-- container for all menu links -->
+	
+	<div class="quote">
+		<div class="container">
+			<blockquote>
+				<p>My life-long journey: teaching how to learn and learning how to teach!</p>
+				<footer>Mihai Boicu in <cite title="Source Title">Teaching Portfolio</cite></footer>
+			</blockquote>	
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<p>Copyright 2015 by Mihai Boicu - All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

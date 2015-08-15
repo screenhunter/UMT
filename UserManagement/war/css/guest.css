@@ -4,4 +4,15 @@ body {
 .menu-link {
 	padding-top: 70px;
 }
-
+.hint-text {
+	color: gray;
+}
+.error-text {
+	color: red;
+}
+input.ng-invalid.ng.dirty {
+	background-color: #FAE6E6;
+}
+input.ng-valid.ng.dirty {
+	background-color: #F2FFF2;
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- You must include the AngularJS application directive, ng-app or data-ng-app. -->
-<html lang="en" data-ng-app>
+<html lang="en" data-ng-app="guestApp">
 
 <head>
 	<!-- META information about your site -->
@@ -85,32 +85,115 @@
 				<h1>Welcome to the User Management Tutorial</h1>
 				<p class="lead">This is a demo of the user management module.</p>
 			</div>
-			<div class="row menu-link" id="about">
-				<h2>About</h2>
-				<p class="lead">This module was created as a demonstration of Bootstrap, AngularJS, GAE, and JDO.</p>
-			</div>
-			<div class="row menu-link" id="users">
-				<h2>Users</h2>
-				<p class="lead">The module allows login and subscription of users with multiple authentication methods.</p>
-			</div>
-			<div class="row menu-link" id="groups">
-				<h2>Groups</h2>
-				<p class="lead">This module allows users to create and join groups.</p>
-			</div>
-			<div class="row menu-link" id="contact">
-				<h2>Contact Us</h2>
-				<p class="lead">For more information please contact us.</p>
-			</div>
-			<div class="row menu-link" id="login">
-				<h2>Login</h2>
-				<p class="lead">If you have an account please login using your current credentials.</p>
-			</div>
-			<div class="row menu-link" id="subscribe">
-				<h2>Subscribe</h2>
-				<p class="lead">Subscribe for a new account.</p>
-			</div>
 		</div>
-	</div>
+		<div class="row menu-link" id="about">
+			<h2>About</h2>
+			<p class="lead">This module was created as a demonstration of Bootstrap, AngularJS, GAE, and JDO.</p>
+		</div>
+		<div class="row menu-link" id="users">
+			<h2>Users</h2>
+			<p class="lead">The module allows login and subscription of users with multiple authentication methods.</p>
+		</div>
+		<div class="row menu-link" id="groups">
+			<h2>Groups</h2>
+			<p class="lead">This module allows users to create and join groups.</p>
+		</div>
+		<div class="row menu-link" id="contact">
+			<h2>Contact Us</h2>
+			<p class="lead">For more information please contact us.</p>
+		</div>
+		<div class="row menu-link" id="login">
+			<h2>Login</h2>
+			<p class="lead">If you have an account please login using your current credentials.</p>
+		</div>
+		
+		<!-- Subscribe -->
+		<div class="menu-link" id="subscribe">
+			<div class='row well well-sm'>
+				<h2>Subscribe</h2>
+				<p class="lead">Subscribe for a new account with our application.</p>
+			</div>
+			
+			<form name="subscribeForm" novalidate role="form"
+				data-ng-controller="SubscribeController as subscribeCtrl"
+				data-ng-submit="subscribeCtrl.subscribeCall();">
+				
+				<!-- EMAIL -->
+				
+				<div class="form-group">
+					<label for="subscribeUserEmailInput">Enter your email:</label>
+					<span class="hint-text"
+						data-ng-show="!subscribeForm.subscribeUserEmailInput.$dirty
+						&& subscribeForm.subscribeUserEmailInput.$invalid">
+						<i>(required)</i>
+					</span>
+					
+					<span class="error-text">
+						<i>(Invalid:
+							<span data-ng-show="subscribeForm.subscribeUserEmailInput.$error.required">
+								Email is required.
+							</span>
+							<span data-ng-show="subscribeForm.subscribeUserEmailInput.$error.email">
+								This is not an email address.
+							</span>
+						)</i>
+					</span>
+					
+					<input type="email" class="form-control" name="subscribeUserEmailInput"
+					placeholder="Enter email"
+					data-ng-model="subscribedUser.email" required>
+					
+				</div> <!-- EMAIL form-group -->
+				
+				<!-- PASSWORD -->
+				<div class="form-group">
+				
+					<label for="subscribeUserPasswordInput">Create your password:</label>
+					<span class="hint-text"
+						data-ng-show="!subscribeForm.subscribeUserPasswordInput.$dirty
+						&& subscribeForm.subscribeUserPasswordInput.$invalid">
+						<i>(required)</i>
+					</span>
+					
+					<span class="error-text">
+						<i>(Invalid:
+							<span data-ng-show="subscribeForm.subscribeUserPasswordInput.$error.required">
+								Password is required.
+							</span>
+						)</i>
+					</span>
+					
+					<input type="password" class="form-control" name="subscribeUserPasswordInput"
+					placeholder="Enter password"
+					data-ng-model="subscribedUser.password" required>
+					
+				</div> <!-- PASSWORD form-group -->
+				
+				<!-- SUBMIT -->
+				<div class="form-group">
+					<button type="submit" class="btn btn-xs btn-success"
+						data-ng-disabled="subscribeCtrl.subscribing || subscribeForm.$invalid">
+						<span class="glyphicon-glyphicon-log-in"></span> Subscribe
+					</button>
+				</div> <!-- SUBMIT form-group -->
+				
+				<div class="alert alert-danger" role="alert"
+					data-ng-show="subscribeCtrl.errorMessage">
+					<strong>{{subscribeCtrl.errorMessage}}</strong>
+					{{subscribeCtrl.errorDetails}}
+				</div>
+				
+				<div class="alert alert-success" role="alert"
+					data-ng-show="subscribeCtrl.successMessage != null">
+					<strong>{{subscribeCtrl.successMessage}}</strong>
+					{{eubscribeCtrl.successDetails}}
+				</div>
+				
+			</form> <!-- subscribeForm -->
+			
+		</div> <!-- subscribe menu link -->
+	</div> <!-- container for all menu links -->
+	
 	<div class="quote">
 		<div class="container">
 			<blockquote>

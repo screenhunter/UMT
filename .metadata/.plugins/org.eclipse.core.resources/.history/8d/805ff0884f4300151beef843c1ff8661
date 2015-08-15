@@ -1,0 +1,13 @@
+body {
+	position: relative;
+}
+.menu-link {
+	padding-top: 70px;
+}
+.error-text {
+	color: red;
+}
+.hint-text {
+	color: gray;
+}
+
