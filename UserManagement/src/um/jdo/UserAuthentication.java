@@ -15,8 +15,12 @@ import javax.jdo.annotations.PrimaryKey;
 import org.mindrot.jbcrypt.BCrypt;
 import org.omg.PortableInterceptor.USER_EXCEPTION;
 
-/*
+/**
+ * 
  * Main Database object for UserAuthenticaiton
+ * 
+ * @author rajatkhanna
+ *
  */
 
 @PersistenceCapable
