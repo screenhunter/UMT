@@ -66,13 +66,12 @@ public class UserAuthentication {
 	 * 			The checked string
 	 */
 	protected static void checkEmail(String email) {
-		if (email==null) {
+		if (email==null)
 			throw new RuntimeException("The email is required.");
-		}
+		
 		Matcher matcher = EMAIL_PATTERN.matcher(email.toUpperCase());
-		if (!matcher.find()) {
+		if (!matcher.find())
 			throw new RuntimeException("The email syntax is invalid.");
-		}
 	}
 	
 	//
@@ -198,7 +197,7 @@ public class UserAuthentication {
 	
 	/**
 	 * Return the unique user registered with this email.
-	 * @param pm the current PersistanceManager
+	 * @param pm the current PersistenceManager
 	 * @param email The searched email (in the user format)
 	 * @return The UserAuthentication if found. Null otherwise.
 	 */
@@ -212,9 +211,9 @@ public class UserAuthentication {
 			@SuppressWarnings("unchecked")
 			List<UserAuthentication> result = (List<UserAuthentication>)query.execute(email.toUpperCase());
 		
-			if (result != null && result.size() > 0) {
+			if (result != null && result.size() > 0)
 				ua = result.get(0);
-			}
+			
 		} catch (Exception e) {
 			//TODO log the error
 		}
@@ -243,9 +242,9 @@ public class UserAuthentication {
 		
 		try {
 			ua = getUserWithEmail(pm, email);
-			if (ua != null) {
+			if (ua != null)
 				throw new RuntimeException("User with email " + email + " is already subscribed");
-			}
+			
 			ua = new UserAuthentication(email, password);
 			pm.makePersistent(ua);
 			return ua;
