@@ -10,9 +10,9 @@ body {
 .error-text {
 	color: red;
 }
-input.ng-invalid.ng.dirty {
+input.ng-invalid.ng-dirty {
 	background-color: #FAE6E6;
 }
-input.ng-valid.ng.dirty {
+input.ng-valid.ng-dirty {
 	background-color: #F2FFF2;
 }
