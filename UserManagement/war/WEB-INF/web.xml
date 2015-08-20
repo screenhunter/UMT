@@ -8,9 +8,17 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>UserManagement</servlet-name>
 		<servlet-class>um.UserManagementServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>SubscribeUser</servlet-name>
+		<servlet-class>um.servlet.SubscribeUserServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>UserManagement</servlet-name>
 		<url-pattern>/usermanagement</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SubscribeUser</servlet-name>
+		<url-pattern>/guest/subscribeuser</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>

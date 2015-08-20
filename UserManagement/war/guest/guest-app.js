@@ -39,7 +39,7 @@ guestModule.controller('SubscribeController', ['$http', '$scope', '$window',
 			if (DEBUG) console.log("User data: " + JSON.stringify(data));
 			
 			return $http.post('/guest/subscribeuser', data,
-				{responseType:"application/json"})
+				{responseType:"json"})
 				.success(function(data, status) {
 					
 					if (data !== null) {

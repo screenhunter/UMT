@@ -57,7 +57,7 @@ public class UserAuthentication {
 	 * The regular expression pattern for the email.
 	 */
 	private static final Pattern EMAIL_PATTERN=
-			Pattern.compile("\\A[A-Z0-9]._%+-]+@(?:[A-Z0-9-]+\\.)+[A-Z]{2-4}\\Z");
+			Pattern.compile("\\A[A-Z0-9]._%+-]+@(?:[A-Z0-9-]+\\.)+[A-Z]{2,4}\\Z");
 	
 	/**
 	 * Check if the email is correct.
